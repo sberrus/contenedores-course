@@ -190,6 +190,15 @@ volumes:
 * `depends_on` → orden de arranque
 * `restart` → reinicio automático
 
+
+## 9.1. Políticas de restart
+Hay cosas como las políticas de restart que es útil tener encuenta, a los servicios, podemos indicarles políticas de restart usando la property `restart` la cual podemos indicar el comportamiento de como y cuando se reinicia un servicio.
+
+- no: default, no reinicia nada si el servicio cae.
+- always: Reinicia el servicio siempre que este caiga.
+- on-failure: Reinicia el contenedor simpre que devuelva un código de error.
+- unless-stopped: reinicia el contenedor independientemente del motivo, hasta que este sea parado o eliminado.
+
 ---
 
 # 10. Ejemplo con build incluido
