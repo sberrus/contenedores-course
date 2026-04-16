@@ -1,0 +1,10 @@
+name: test
+
+services:
+  hello_world:
+    container_name: hello_world
+    build: .
+    ports:
+      - 80:80
+    volumes:
+      - ./index.html:/usr/share/nginx/html/index.html:ro
